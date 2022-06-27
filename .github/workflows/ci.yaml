@@ -34,6 +34,9 @@ jobs:
         run: "echo STATUS: Always."
         if: always()
 
+      - name: Prepare PATH
+        run: echo "${HOME}/.local/bin" >> ${GITHUB_PATH}
+        
       - name: Install c2cciutils
         run: python3 -m pip install --user --requirement=ci/requirements.txt
 
