@@ -17,18 +17,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Fail
         run: "false"
-
       - name: OnFailure
         run: echo "This step will be skipped on Monday and Wednesday"
         if: failure()
-
       - name: OnSuccess
-        run: echo "STATUS: Success."
+        run: echo "blabla"
         if: success()
- 
       - name: OnAlways
-        run: echo "STATUS: Always."
+        run: echo "blabla"
         if: always()
