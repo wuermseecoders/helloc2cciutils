@@ -17,6 +17,7 @@
   <description>Demo project for Spring Boot, REST and built with C2C CI Utils</description>
   <properties>
     <java.version>11</java.version>
+    <project.build.outputTimestamp>10</project.build.outputTimestamp>
   </properties>
   <dependencies>
     <dependency>
@@ -41,6 +42,27 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.6.0</version>
+                  <message>Invalid Maven version. It should, at least,
+                    be 3.0</message>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
