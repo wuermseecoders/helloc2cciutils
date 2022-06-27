@@ -19,11 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Fail
-        run: "false"
+#      - name: Fail
+#        run: "false"
 
       - name: OnFailure
-        run: echo "STATUS: Failure."
+        run: echo "This step will be skipped on Monday and Wednesday"
         if: failure()
 
       - name: OnSuccess
