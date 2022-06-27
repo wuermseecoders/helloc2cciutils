@@ -29,10 +29,13 @@ jobs:
       - name: OnSuccess
         run: "echo STATUS: Success."
         if: success()
- 
+
       - name: OnAlways
         run: "echo STATUS: Always."
         if: always()
+
+      - name: Try printing a warning
+        run: "echo Warning: Something to warn happend."
 
       - name: Prepare PATH
         run: echo "${HOME}/.local/bin" >> ${GITHUB_PATH}
