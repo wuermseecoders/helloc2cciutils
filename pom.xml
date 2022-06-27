@@ -12,7 +12,7 @@
   <groupId>com.camptocamp.bhoefling</groupId>
   <artifactId>helloc2cciutils</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>helloc2cciutils</name>
   <description>Demo project for Spring Boot, REST and built with C2C CI Utils</description>
   <properties>
@@ -25,11 +25,6 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-tomcat</artifactId>
-      <scope>provided</scope>
-    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
