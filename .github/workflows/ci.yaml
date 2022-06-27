@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - run: echo "STATUS: Failure."
-      - run: echo "STATUS: Success."
-      - run: echo "STATUS: Failure."
+      - run: "echo STATUS: Failure."
+      - run: "echo STATUS: Success."
+      - run: "echo STATUS: Failure."
 
