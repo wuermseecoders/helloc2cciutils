@@ -1,5 +1,5 @@
 ---
-name: Continuous integrationxxxxxxx
+name: Continuous integration
 
 on:
   push:
@@ -12,13 +12,15 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     timeout-minutes: 25
-    name: Continuous Integration2
+    name: Continuous Integration
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fail
+
+      - name: Fail more or less
         run: "false"
+        continue-on-error: true
 
       - name: OnFailure
         run: "echo STATUS: Failure."
@@ -31,3 +33,9 @@ jobs:
       - name: OnAlways
         run: "echo STATUS: Always."
         if: always()
+
+      - name: Install c2cciutils
+        run: python3 -m pip install --user --requirement=ci/requirements.txt
+
+      - name: Checks
+        run: c2cciutils-checks
