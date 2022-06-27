@@ -26,10 +26,10 @@ jobs:
         run: echo "This step will be skipped on Monday and Wednesday"
         if: failure()
 
-      - name: OnSuccess
-        run: echo "STATUS: Success."
-        if: success()
+      # - name: OnSuccess
+      #   run: echo "STATUS: Success."
+      #   if: success()
  
-      - name: OnAlways
-        run: echo "STATUS: Always."
-        if: always()
+      # - name: OnAlways
+      #   run: echo "STATUS: Always."
+      #   if: always()
