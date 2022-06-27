@@ -35,7 +35,7 @@ jobs:
         if: always()
 
       - name: Try printing a warning
-        run: "echo Warning: Something to warn happened."
+        run: "echo ::warning file=foo.bar,line=1,col=5,endColumn=7::Missing semicolon" 
 
       - name: Prepare PATH
         run: echo "${HOME}/.local/bin" >> ${GITHUB_PATH}
