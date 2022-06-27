@@ -1,5 +1,5 @@
 ---
-name: Continuous integration
+name: Continuous integration2
 
 on:
   push:
@@ -17,7 +17,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - run: "echo STATUS: Failure."
-      - run: "echo STATUS: Success."
-      - run: "echo STATUS: Failure."
+      - name: Fail
+        run: "false"
 
+      - name: OnFailure
+        run: "echo STATUS: Failure."
+        if: failure()
+
+      - name: OnSuccess
+        run: "echo STATUS: Success."
+        if: success()
+ 
+      - name: OnAlways
+        run: "echo STATUS: Always."
+        if: always()
