@@ -1,8 +1,4 @@
 checks:
   editorconfig: false
   prettier: false
-  required_workflows:
-    ci.yaml:
-      steps: []
-    main.yaml:
-      steps: []
+  required_workflows: false
