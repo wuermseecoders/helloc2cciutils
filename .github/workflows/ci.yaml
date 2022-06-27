@@ -17,7 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fail
-        run: echo "This step will be skipped on Monday and Wednesday"
-        run: echo "blabla"
-        run: echo "blabla"
+      - run: echo "This step will be skipped on Monday and Wednesday"
+      - run: echo "blabla"
+      - run: echo "blabla"
